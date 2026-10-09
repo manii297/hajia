@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170c27">
+<title>For Hajia, With Love 💗</title>
+<style>
+:root{--bg:#170c27;--pink:#ff75b5;--rose:#ffb0cf;--gold:#ffe0a3;--lilac:#c7b4ff;--text:#fff5fb;--muted:#e3cfe0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 15% 12%,#58234f 0,transparent 35%),radial-gradient(ellipse at 90% 75%,#38215e 0,transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.4;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 100px 80px,#fff,transparent),radial-gradient(2px 2px at 170px 140px,#ffb0cf,transparent),radial-gradient(1px 1px at 230px 40px,#fff,transparent);background-size:270px 200px;animation:stars 5s infinite alternate}
+@keyframes stars{from{opacity:.2}to{opacity:.65}}
+button{font:inherit;cursor:pointer;border:0;transition:transform .2s,filter .2s}button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.screen{position:relative;z-index:1;min-height:100svh;display:none;align-items:center;justify-content:center;padding:28px 16px}
+.screen.active{display:flex;animation:fade .8s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.panel{width:min(850px,100%);padding:clamp(25px,5vw,58px);border:1px solid #ffffff2a;border-radius:30px;background:linear-gradient(145deg,#ffffff17,#ffffff08);box-shadow:0 25px 90px #0005,inset 0 1px #ffffff20;backdrop-filter:blur(18px);text-align:center}
+.pill{display:inline-block;padding:8px 14px;border:1px solid #ffffff30;border-radius:99px;color:#ffe0f0;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+h1{font-size:clamp(3.4rem,11vw,7.4rem);line-height:.93;letter-spacing:-.075em;margin:25px 0 20px;background:linear-gradient(100deg,#fff,#ffafd2 48%,#ffe2a4);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(1.8rem,5vw,3rem);margin:0 0 14px;letter-spacing:-.04em}
+p{line-height:1.85;color:var(--muted)}
+.lead{max-width:600px;margin:0 auto;font-size:clamp(1rem,2.5vw,1.2rem)}
+.big-heart{font-size:clamp(5rem,15vw,9rem);display:block;filter:drop-shadow(0 0 35px #ff6db877);animation:heartbeat 1.8s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.09)}22%{transform:scale(1)}32%{transform:scale(1.06)}44%{transform:scale(1)}}
+.btn{padding:14px 22px;border-radius:99px;font-weight:800}
+.primary{background:linear-gradient(100deg,#ffafd2,#ffe1a0);color:#401633;box-shadow:0 8px 30px #ff77b944}
+.secondary{background:#ffffff10;border:1px solid #ffffff30;color:white}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}
+.tiny{font-size:.84rem;color:#cbb5d0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:26px}
+.memory{padding:19px;border-radius:20px;border:1px solid #ffffff20;background:#160b2d88;text-align:left}
+.memory .icon{font-size:1.8rem}.memory h3{margin:10px 0 5px;color:#ffd1e7}.memory p{font-size:.93rem;margin:0}
+.timeline{max-width:560px;margin:25px auto 0;text-align:left;border-left:2px solid #ff8dbd;padding-left:22px}
+.timeline .date{color:var(--gold);font-weight:800;letter-spacing:.04em}
+.letter{font-family:Georgia,serif;font-size:clamp(1.05rem,2.7vw,1.3rem);line-height:2;color:#fff0f8;white-space:pre-line;text-align:left;max-width:650px;margin:24px auto}
+.signature{font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:1.3rem}
+.cake{font-size:clamp(6rem,19vw,10rem);display:block;filter:drop-shadow(0 15px 30px #ff6eb455);animation:bob 3s ease-in-out infinite;cursor:pointer}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+#bubbleArea{height:280px;position:relative;overflow:hidden;border:1px solid #ffffff20;border-radius:22px;background:linear-gradient(#24113b99,#140c2799);margin-top:18px;touch-action:manipulation}
+.bubble{position:absolute;border-radius:50%;display:grid;place-items:center;box-shadow:inset -8px -10px 18px #0002,inset 5px 5px 12px #ffffff70,0 0 18px #ff7bb455;animation:floatBubble 3s ease-in-out infinite alternate;border:1px solid #ffffff70;user-select:none}
+@keyframes floatBubble{from{transform:translateY(5px)}to{transform:translateY(-12px)}}
+#score{color:var(--gold);font-weight:800}
+#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:10}
+.float{position:fixed;z-index:8;bottom:-80px;pointer-events:none;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-120vh) rotate(25deg);opacity:0}}
+.footer{margin-top:28px;color:#c2aeca;font-size:.82rem}
+.hidden{display:none!important}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.panel{border-radius:23px}.btn{width:100%}#bubbleArea{height:320px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+
+<section class="screen active" id="welcome">
+ <div class="panel">
+  <span class="pill">A little universe made for you ✦</span>
+  <span class="big-heart">💗</span>
+  <h1>Hey, Hajia!</h1>
+  <p class="lead">Someone who means the whole world to me has a birthday coming up… and I made a tiny corner of the internet just for her.</p>
+  <p class="tiny">A little surprise from Abdul Rahman, with all my heart.</p>
+  <div class="actions"><button class="btn primary" onclick="go('birthday');burst(100);sprinkle()">Open your surprise ✨</button></div>
+  <div class="footer">Psst… turn your sound on if you want to hear a little birthday melody 🎶</div>
+ </div>
+</section>
+
+<section class="screen" id="birthday">
+ <div class="panel">
+  <span class="pill">Today, the universe celebrates you</span>
+  <h1>Happy Birthday<br>Hajia 🎂</h1>
+  <span class="cake" id="cake" title="Tap the cake!">🎂</span>
+  <p class="lead">To my best friend, my girl, my favourite person, and my lifeline — I hope today gives you even a little of the happiness you bring into my life.</p>
+  <div class="actions">
+   <button class="btn primary" onclick="go('story');burst(150);sprinkle()">Our little story 💞</button>
+   <button class="btn secondary" onclick="go('letter');burst(70)">A letter for you 💌</button>
+  </div>
+  <div class="footer">Make a wish, birthday girl 🌙</div>
+ </div>
+</section>
+
+<section class="screen" id="story">
+ <div class="panel">
+  <span class="pill">Chapter one — and still going</span>
+  <h2>Our story 💗</h2>
+  <p>Some dates become special because of the person we met on them.</p>
+  <div class="timeline">
+   <div class="date">22 August 2024 ✨</div>
+   <p>The day our story began — a day that gave me someone I never want to stop appreciating.</p>
+   <div class="date">Then, now, and ahead 🌷</div>
+   <p>Through all the little conversations, laughs, random moments, and days in between, I'm grateful that we're still here, making memories together.</p>
+   <div class="date">Your birthday — the day to celebrate YOU 🎂</div>
+   <p>Today is your reminder that you matter, you are loved, and your happiness matters to me.</p>
+  </div>
+  <div class="actions"><button class="btn primary" onclick="go('letter');burst(80)">Read your letter 💌</button><button class="btn secondary" onclick="go('birthday')">Back</button></div>
+ </div>
+</section>
+
+<section class="screen" id="letter">
+ <div class="panel">
+  <span class="pill">From Abdul Rahman, with love</span>
+  <h2>Dear Hajia 💌</h2>
+  <div class="letter">Happy birthday to my best friend, my girl, and my lifeline.
+
+I still feel lucky that our paths crossed on 22 August 2024. Since then, you've become such a special part of my world. You are the person behind so many smiles, the one I want to share my random thoughts with, and someone whose happiness genuinely matters to me.
+
+On your birthday, I wish you a heart that feels peaceful, a life full of beautiful surprises, and the courage to chase every dream you carry. May Allah protect you, bless you with health and happiness, open the best doors for you, and keep your smile shining.
+
+I can't promise that every day will be perfect, but I hope I can keep giving you reasons to smile, someone to talk to, and memories worth keeping. Thank you for being you, Hajia.
+
+Today is your day. Make a wish, smile your prettiest smile, and remember how deeply appreciated you are. 💗</div>
+  <p class="signature">Always cheering for you, Abdul Rahman ❤️</p>
+  <div class="actions"><button class="btn primary" onclick="go('bubbles');sprinkle()">Play a little game 🫧</button><button class="btn secondary" onclick="go('final')">One last surprise 🎁</button></div>
+ </div>
+</section>
+
+<section class="screen" id="bubbles">
+ <div class="panel">
+  <span class="pill">A tiny birthday game</span>
+  <h2>Pop the love bubbles! 🫧</h2>
+  <p>Tap the floating bubbles and collect hearts. Every pop is a little birthday hug from me.</p>
+  <p>Hearts collected: <span id="score">0</span> 💗</p>
+  <div id="bubbleArea" aria-label="Tap the bubbles to pop them"></div>
+  <div class="actions"><button class="btn secondary" onclick="makeBubbles()">Restart game ↻</button><button class="btn primary" onclick="go('final');burst(160);sprinkle()">Claim your final surprise 🎁</button></div>
+ </div>
+</section>
+
+<section class="screen" id="final">
+ <div class="panel">
+  <span class="pill">A wish for your next chapter</span>
+  <span class="cake">🎁</span>
+  <h2>Keep shining, Hajia ✨</h2>
+  <p class="lead">May this new year of your life bring you more peace than worry, more laughter than tears, more wins than doubts, and more love than your heart can hold.</p>
+  <div class="grid">
+   <div class="memory"><div class="icon">🌙</div><h3>May Allah bless you</h3><p>With protection, peace, health, and barakah in everything you do.</p></div>
+   <div class="memory"><div class="icon">🌷</div><h3>Keep being you</h3><p>Your kindness, your laugh, and your little ways make you wonderfully you.</p></div>
+   <div class="memory"><div class="icon">⭐</div><h3>Dream big</h3><p>I hope you get every beautiful opportunity you have been wishing for.</p></div>
+   <div class="memory"><div class="icon">💞</div><h3>More memories</h3><p>Here's to more silly talks, smiles, and moments we can look back on.</p></div>
+  </div>
+  <h1 style="font-size:clamp(2.8rem,8vw,5rem);margin-top:36px">Happy Birthday,<br>Hajia! 💖</h1>
+  <p class="signature">With love, Abdul Rahman</p>
+  <div class="actions"><button class="btn primary" onclick="burst(240);sprinkle()">More fireworks! 🎆</button><button class="btn secondary" onclick="go('welcome')">Replay surprise ↻</button><button class="btn secondary" onclick="shareWish()">Share wish 💌</button></div>
+  <div class="footer">Made with love, just for you. 💗</div>
+ </div>
+</section>
+
+<script>
+function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});if(id==='bubbles')makeBubbles()}
+const canvas=document.getElementById('confetti'),ctx=canvas.getContext('2d');let pieces=[],running=false;
+function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}addEventListener('resize',resize);resize();
+function burst(n=120){let colors=['#ff75b5','#ffe0a3','#c7b4ff','#fff5fb','#ff9f9f'];for(let i=0;i<n;i++)pieces.push({x:innerWidth/2+(Math.random()-.5)*150,y:innerHeight*.4+(Math.random()-.5)*100,vx:(Math.random()-.5)*10,vy:-Math.random()*9-2,size:3+Math.random()*6,rot:Math.random()*6,vr:(Math.random()-.5)*.25,c:colors[Math.floor(Math.random()*colors.length)],life:90+Math.random()*70});if(!running){running=true;requestAnimationFrame(draw)}}
+function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);pieces=pieces.filter(p=>p.life>0);for(const p of pieces){p.x+=p.vx;p.y+=p.vy;p.vy+=.13;p.rot+=p.vr;p.life--;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.globalAlpha=Math.min(1,p.life/25);ctx.fillStyle=p.c;ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*1.5);ctx.restore()}if(pieces.length)requestAnimationFrame(draw);else running=false}
+function floatEmoji(e){let el=document.createElement('div');el.className='float';el.textContent=e;el.style.left=Math.random()*94+'vw';el.style.animationDuration=(5+Math.random()*5)+'s';el.style.fontSize=(24+Math.random()*25)+'px';document.body.appendChild(el);setTimeout(()=>el.remove(),11000)}
+function sprinkle(){let emojis=['💗','✨','🌷','🎈','💖','⭐','🦋'];for(let i=0;i<16;i++)setTimeout(()=>floatEmoji(emojis[Math.floor(Math.random()*emojis.length)]),i*170)}
+document.getElementById('cake').addEventListener('click',()=>{burst(130);sprinkle()});
+let score=0;function makeBubbles(){const area=document.getElementById('bubbleArea');area.innerHTML='';score=0;document.getElementById('score').textContent=score;const colors=['#ff86bd','#c6a8ff','#ffcf9d','#ffb0ce','#a8e8e0'];for(let i=0;i<13;i++){let b=document.createElement('button');b.className='bubble';let size=38+Math.random()*35;b.style.width=size+'px';b.style.height=size+'px';b.style.left=Math.random()*Math.max(0,area.clientWidth-size)+'px';b.style.top=Math.random()*Math.max(0,area.clientHeight-size)+'px';b.style.background=colors[i%colors.length];b.style.animationDelay=(Math.random()*-3)+'s';b.setAttribute('aria-label','Pop love bubble');b.textContent=['♥','✦','♡','💗'][i%4];b.addEventListener('click',()=>{if(b.dataset.popped)return;b.dataset.popped='1';score++;document.getElementById('score').textContent=score;b.style.transform='scale(1.8)';b.style.opacity='0';b.style.pointerEvents='none';burst(9);floatEmoji('💖');if(score===13){setTimeout(()=>alert('You collected all 13 love bubbles! Sending you a million birthday hugs, Hajia 💗'),250)}});area.appendChild(b)}}
+async function shareWish(){const text='Happy Birthday, Hajia! 💗 A special birthday surprise made with love by Abdul Rahman. May Allah bless you with happiness, health, and success. 🎂✨';if(navigator.share){try{await navigator.share({title:'Happy Birthday Hajia',text})}catch(e){}}else if(navigator.clipboard){try{await navigator.clipboard.writeText(text);alert('Birthday wish copied! Paste it into your favourite chat 💌')}catch(e){alert(text)}}else alert(text)}
+setTimeout(()=>{for(let i=0;i<5;i++)setTimeout(()=>floatEmoji(['✨','💗','🌷'][i%3]),i*650)},700);
+</script>
+</body>
+</html>
